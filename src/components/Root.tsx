@@ -48,7 +48,7 @@ export default function Root() {
                   isActive ? "active" : isPending ? "pending" : ""
                 }
               >
-                <i>SpendCategory</i>
+                <i>Category</i>
               </NavLink>
             </li>
           </ul>
