@@ -12,17 +12,27 @@ interface AppProps {
 
 export default function CategoryCards({ categories }: AppProps) {
   return (
-    <Grid container>
+    <Grid container spacing={2}>
       {categories.map((category) => (
         <Grid item md={4}>
-          <Card sx={{ maxWidth: 345 }}>
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lizard
+          <Card>
+            <CardContent style={{ height: "200px", verticalAlign: "middle" }}>
+              <Typography
+                textAlign="center"
+                fontWeight="bold"
+                gutterBottom
+                variant="h5"
+                component="div"
+              >
+                {category.label}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+              <Typography
+                textAlign="center"
+                fontSize="20px"
+                variant="body2"
+                fontWeight="bold"
+              >
+                ￥{category.amount}
               </Typography>
             </CardContent>
           </Card>
